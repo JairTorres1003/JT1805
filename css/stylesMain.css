@@ -1,0 +1,205 @@
+:root{
+    --Dominan_Color--: rgb(36,8,71);
+    --SecondD_Color--: rgb(86, 53, 171);
+    --HD_backgroundColor--: rgb(22, 42, 117);
+    --HD_Border--: 5px solid rgb(255, 255, 255);
+    --HD_height--: 8vh;
+    --FD_backgroundColor--: rgb(22, 42, 117);
+    --FD_height--: 3vh;
+    --Dominan_fontFamily--: 'Mogra', cursive;
+    --SecondD_fontFamily--: 'Montserrat', sans-serif;
+    --LG_background--: rgb(36,8,71);
+    --LinearGradiant_background--: linear-gradient(146deg, rgba(36, 8, 71, 1) 0%, rgba(86, 53, 171, 1) 61%, rgba(60, 26, 168, 1) 80%, rgba(24, 12, 94, 1) 100%);
+    --RadialGradiant_background--: radial-gradient(circle, rgba(213, 6, 6, 0.2) 0%, rgba(0, 50, 178, 0.2) 100%);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*TODO: HEADER*/
+.load_page{
+    width: 0%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(146deg, rgb(77, 119, 175) 0%, rgb(53, 171, 102) 61%, rgb(36, 20, 80) 100%);
+    transition: width 1.5s;
+}
+.header_container{
+    width: 100%;
+    height: var(--HD_height--);
+    background-color: var(--HD_backgroundColor--);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5%;
+}
+.header_container .center_container{
+    background: rgb(48,20,108);
+    background: radial-gradient(circle, rgba(48, 20, 108, 1) 60%, rgba(22 ,20, 131, 0.85) 100%);
+    width: 16vh;
+    height: 9vh;
+    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%; 
+    border-left: var(--HD_Border--);
+    border-bottom: var(--HD_Border--);
+    border-right: var(--HD_Border--);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+}
+.header_container .center_container:hover{
+    opacity: 0.8;
+}
+.center_container .logo_JT{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 3.2em;
+    font-family: var(--Dominan_fontFamily--);
+}
+.header_container .left_container, .right_container{
+    width: calc(50% - 12vh);
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+.category{
+    color: rgb(255, 255, 255);
+    font-size: 1.8em;
+    font-family: var(--Dominan_fontFamily--);
+    cursor: pointer;
+}
+.category:hover{
+    color: rgba(255, 255, 255, 0.8);
+}
+/*TODO: MAIN*/
+.main{
+    background: var(--LG_background--);
+    background: var(--LinearGradiant_background--);
+    width: 100%;
+    height: calc(100vh - var(--HD_height--) - var(--FD_height--));
+    box-shadow: inset 0 5px 15px 0 rgb(0, 0, 0), inset 20px 5px 15px 0 rgba(255, 0, 0, 0),  inset -20px 5px 15px 0 rgba(255, 0, 0, 0);
+}
+.main .main_container{
+    width: 100%;
+    height: 100%;
+    background: var(--RadialGradiant_background--);
+    background-position-x: -200px;
+    background-position-y: -200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.main .main_container::before{
+    content: "";
+    width: 81%;
+    height: 82%;
+    background: linear-gradient(100deg, rgb(36, 8, 71) 0%, rgb(42, 21, 102) 25%, rgb(111, 91, 226) 50%, rgb(42, 21, 102) 75%, rgb(36, 8, 71)  100%) ;
+    background-repeat: repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    animation: rotateGradiant 10s linear infinite;
+    border-radius: 1em;
+}
+@keyframes rotateGradiant {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: -80rem 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+.main_container .categorys_container {
+    width: 80%;
+    height: 80%;
+    background: var(--LG_background--);
+    background: var(--LinearGradiant_background--);
+    background-size: calc(100vh + 390px) 100vh;
+    background-position: -130px -130px;
+    border-radius: 1em;
+    z-index: 1000;
+}
+.categorys_container .subcc_container{
+    width: 100%;
+    height: 100%;
+    background: var(--RadialGradiant_background--);
+    background-size: calc(100vh + 390px) 100vh;
+    background-position: -330px -330px;
+    border-radius: 1em;
+}
+.subcc_container .subcc{
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: rgba(240, 240, 240, 0.5);
+    overflow: hidden;
+}
+.subcc .onload_category{
+    width: inherit;
+    height: inherit;
+    display: flex; /*!(flex / none)*/
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.subcc .onload_category span{
+    width: max-content;
+    height: max-content;
+    font-size: 2.5em;
+    font-family: var(--Dominan_fontFamily--);
+    color: var(--Dominan_Color--);
+    animation: loading 1s infinite;
+}
+.subcc .onload_category span:nth-child(1){animation-delay: .1s;}
+.subcc .onload_category span:nth-child(2){animation-delay: .2s;}
+.subcc .onload_category span:nth-child(3){animation-delay: .3s;}
+.subcc .onload_category span:nth-child(4){animation-delay: .4s;}
+.subcc .onload_category span:nth-child(5){animation-delay: .5s;}
+.subcc .onload_category span:nth-child(6){animation-delay: .6s;}
+.subcc .onload_category span:nth-child(7){animation-delay: .7s;}
+.subcc .onload_category span:nth-child(8){animation-delay: .8s;}
+.subcc .onload_category span:nth-child(9){animation-delay: .9s;}
+.subcc .onload_category span:nth-child(10){animation-delay: .1s;}
+.subcc .onload_category span:nth-child(11){animation-delay: .2s;}
+@keyframes loading {
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/*TODO: FOOTER*/
+.footer_container{
+    width: 100%;
+    height: var(--FD_height--);
+    background-color: var(--FD_backgroundColor--);
+    font-size: 1em;
+    font-family: var(--Dominan_fontFamily--);
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
