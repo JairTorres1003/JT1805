@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon_JT.png">
+    <link rel="stylesheet" href="css/stylesMain.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesFuntions.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesMusic.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesGames.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesMain-Responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesFuntions-Responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesMusic-Responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesGames-Responsive.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title id="title-Page">Funciones</title>
+</head>
+<body>
+    <header>
+        <div class="load_page" id="load-page"></div>
+        <div class="header_container">
+            <div class="center_container">
+                <a href="index.html" class="logo_JT">JT</a>
+            </div>
+            <div class="left_container">
+                <span class="category" id="c-funtion" onclick="reloadPage(), categoryFuntion()">Funciones</span>
+                <span class="category" id="c-music" onclick="reloadPage(), categoryMusic()">Música</span>
+                <span class="category" id="c-games" onclick="reloadPage(), categoryGames()">Juegos</span>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main_container">
+            <div class="categorys_container">
+                <div class="subcc_container">
+                    <div class="subcc" id="subcc">
+                        <div class="onload_category" id="onload-category">
+                            <span>C</span>
+                            <span>a</span>
+                            <span>r</span>
+                            <span>g</span>
+                            <span>a</span>
+                            <span>n</span>
+                            <span>d</span>
+                            <span>o</span>
+                            <span>.</span>
+                            <span>.</span>
+                            <span>.</span>
+                        </div>
+                        <div class="funtions_category" id="funtions-category">
+                            <span class="menu" id="menu" onclick="menu()"><ion-icon name="menu-outline"></ion-icon></span>
+                            <div class="btnFuntions_container" id="btnFuntions-container">
+                                <button class="btn_funtion" id="btn-f1" onclick="btnFMain(), btnFuntion1()">Función 1</button>
+                                <button class="btn_funtion" id="btn-f2" onclick="btnFMain(), btnFuntion2()">Función 2</button>
+                                <button class="btn_funtion" id="btn-f3" onclick="btnFMain(), btnFuntion3()">Función 3</button>
+                                <button class="btn_funtion" id="btn-f4" onclick="btnFMain(), btnFuntion4()">Función 4</button>
+                                <button class="btn_funtion" id="btn-f5" onclick="btnFMain(), btnFuntion5()">Función 5</button>
+                                <button class="btn_funtion" id="btn-f6" onclick="btnFMain(), btnFuntion6()">Función 6</button>
+                            </div>
+                            <div class="runFuntion_container" id="runFuntion-container">
+                                <div class="run_funtion" id="run-funtionNone">
+                                    <p class="present_event">EVENTOS DE JAVASCRIPT</p>
+                                </div>
+                                <div class="run_funtion disablerRFuntionN" id="run-funtion1">
+                                    <h1 class="titleRun_funtion">Eventos de Mouse</h1>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">onmousedown | onmouseup</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>onmousedown</b>" Pulsar un botón del ratón y no soltarlo.</p>
+                                                    <p>Evento "<b>onmouseup</b>" Soltar el botón del ratón.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion pf1">
+                                            <div class="test">
+                                                <div class="test_1">
+                                                    <p>Prueba 1</p>
+                                                    <button class="press_me" onmousedown="pressMeDown()" onmouseup="pressMeUp()">Pulsame!</button>
+                                                </div>
+                                                <div class="result_test1">
+                                                    <p>Resultado 1</p>
+                                                    <div class="bar_load">
+                                                        <div class="loading" id="loading"></div>
+                                                    </div>
+                                                    <p id="load-finished">cargar</p>
+                                                </div>
+                                            </div>
+                                            <span></span>
+                                            <div class="test">
+                                                <div class="test_2">
+                                                    <p>Prueba 2</p>
+                                                    <label class="press_me" onmousedown="textPressMeDown()" onmouseup="textPressMeUp()">Pulsame!</label>
+                                                </div>
+                                                <div class="result_test2">
+                                                    <p>Resultado 2</p>
+                                                    <p class="result_testTex" id="result-testText">Estas oprimiendo texto</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">onmouseover | onmouseout</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>onmouseover</b>" El ratón entra en el elemento.</p>
+                                                    <p>Evento "<b>onmouseout</b>" El ratón sale del elemento.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion pf2">
+                                            <div class="test">
+                                                <div class="test_1">
+                                                    <p>Prueba 1</p>
+                                                    <span class="entry_mouse" id="entry-mouse" onmouseover="entryMouseOver()" onmouseout="entryMouseOut()">
+                                                        <p>¡Coloca el mouse aqui!</p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <span></span>
+                                            <div class="test">
+                                                <div class="test_2">
+                                                    <p>Prueba 2</p>
+                                                    <span class="entry_mouse" id="entry-mouseText" onmouseover="textEntryMouseOver()" onmouseout="textEntryMouseOut()">
+                                                        <p>¡Coloca el mouse aqui!</p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">onclick</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>onclick</b>" Pulsar y soltar el ratón.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion pf1">
+                                            <div class="test">
+                                                <div class="test_1">
+                                                    <p>Prueba 1</p>
+                                                    <button class="press_me" onclick="pressMeClick()">Pulsame!</button>
+                                                </div>
+                                                <div class="result_test1">
+                                                    <p>Resultado 1</p>
+                                                    <div class="spiner" id="spiner"></div>
+                                                </div>
+                                            </div>
+                                            <span></span>
+                                            <div class="test">
+                                                <div class="test_2">
+                                                    <p>Prueba 2</p>
+                                                    <label class="press_me" onclick="textPressMeClick()">Pulsame!</label>
+                                                </div>
+                                                <div class="result_test2">
+                                                    <p>Resultado 2</p>
+                                                    <div class="spiner_text" id="spiner-text">
+                                                        <p>load</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">ondblclick</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>ondblclick</b>" Pulsar dos veces seguidas con el ratón.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion pf2">
+                                            <div class="test">
+                                                <div class="test_1">
+                                                    <p>Prueba 1</p>
+                                                    <div class="pain" id="pain" ondblclick="painDblClick()">
+                                                        <p id="click-pain">click</p>
+                                                        <img src="images/painting.png" alt="" id="img-pain">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span></span>
+                                            <div class="test">
+                                                <div class="test_2">
+                                                    <p>Prueba 2</p>
+                                                    <p class="text_dbl" id="text-dbl" ondblclick="textDblClick()">¡Dale docle click al texto!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="run_funtion disablerRFuntionN" id="run-funtion2">
+                                    <h1 class="titleRun_funtion">Eventos de Teclado</h1>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">onkeydown</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>onkeydown</b>" Pulsar una tecla y no soltarla.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion"></div>
+                                    </div>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">onkeypress</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>onkeypress</b>" Pulsar una tecla.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion"></div>
+                                    </div>
+                                    <div class="funtion_test">
+                                        <div class="head_funtion">
+                                            <p class="name_funtion">onkeyup</p>
+                                            <span class="information">
+                                                <ion-icon name="help-circle-outline"></ion-icon>
+                                                <div class="modal_information">
+                                                    <p>Evento "<b>onkeyup</b>" Soltar una tecla pulsada.</p>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="play_funtion"></div>
+                                    </div>
+                                </div>
+                                <div class="run_funtion disablerRFuntionN" id="run-funtion3">
+                                    <h1 class="titleRun_funtion">PRÓXIMAMENTE...</h1>
+                                    <!-- <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div> -->
+                                </div>
+                                <div class="run_funtion disablerRFuntionN" id="run-funtion4">
+                                    <h1 class="titleRun_funtion">PRÓXIMAMENTE...</h1>
+                                    <!-- <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div> -->
+                                </div>
+                                <div class="run_funtion disablerRFuntionN" id="run-funtion5">
+                                    <h1 class="titleRun_funtion">PRÓXIMAMENTE...</h1>
+                                    <!-- <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div> -->
+                                </div>
+                                <div class="run_funtion disablerRFuntionN" id="run-funtion6">
+                                    <h1 class="titleRun_funtion">PRÓXIMAMENTE...</h1>
+                                    <!-- <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div>
+                                    <div class="funtion_test"></div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="music_category" id="music-category">
+                            <div class="music_player">
+                                <div class="player">
+                                    <audio src="" id="audio-song" onended="songEnded()"></audio>
+                                    <div class="btns_container">
+                                        <span class="controls prev" id="Prev" onclick="prevSong()">
+                                            <ion-icon name="play-back-outline"></ion-icon>
+                                        </span>
+                                        <span class="controls play_pause" id="play-pause" onclick="playPause()">
+                                            <ion-icon name="play-outline"></ion-icon>
+                                        </span>
+                                        <span class="controls next" id="Next" onclick="nextSong()">
+                                            <ion-icon name="play-forward-outline"></ion-icon>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="name_song_play">
+                                    <p id="name-songPlay"></p>
+                                </div>
+                                <div class="song_cover">
+                                    <div class="cover">
+                                        <img src="" alt="" id="cover-songPlay">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="play_list_container">
+                                <div class="play_list" id="play-list" onclick="selectSongList(event)">
+                                    <!-- <div class="song" id="song-1">
+                                        <div class="list_cover">
+                                            <img src="images/(1)Gym Class Heroes ft. Adam Levine - Stereo Hearts.jpg" alt="Gym Class Heroes ft. Adam Levine - Stereo Hearts">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Gym Class Heroes ft. Adam Levine - Stereo Hearts</p>
+                                            <p class="song_duration">Duración: 3:30</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-2">
+                                        <div class="list_cover">
+                                            <img src="images/(2)Stressed Out by twenty one pilots.jpg" alt="Stressed Out by twenty one pilots">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Stressed Out by twenty one pilots</p>
+                                            <p class="song_duration">Duración: 3:22</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-3">
+                                        <div class="list_cover">
+                                            <img src="images/(3)Cuarteto de Nos - Lo malo de ser bueno.jpg" alt="Cuarteto de Nos - Lo malo de ser bueno">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Cuarteto de Nos - Lo malo de ser bueno</p>
+                                            <p class="song_duration">Duración: 4:02</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-4">
+                                        <div class="list_cover">
+                                            <img src="images/(4)Farruko - Pepas.jpg" alt="Farruko - Pepas">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Farruko - Pepas</p>
+                                            <p class="song_duration">Duración: 4:47</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-5">
+                                        <div class="list_cover">
+                                            <img src="images/(5)Kidd Keo - Ma Vie feat. Yay.jpg" alt="Kidd Keo - Ma Vie feat. Yay">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Kidd Keo - Ma Vie feat. Yay</p>
+                                            <p class="song_duration">Duración: 3:54</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-6">
+                                        <div class="list_cover">
+                                            <img src="images/(6)Nathan Evans - Wellerman.jpg" alt="Nathan Evans - Wellerman">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Nathan Evans - Wellerman</p>
+                                            <p class="song_duration">Duración: 2:35</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-7">
+                                        <div class="list_cover">
+                                            <img src="images/(7)Moves like Jagger - Maroon 5 ft. Cristina Aguilera.jpg" alt="Moves like Jagger - Maroon 5 ft. Cristina Aguilera">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Moves like Jagger - Maroon 5 ft. Cristina Aguilera</p>
+                                            <p class="song_duration">Duración: 3:22</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-8">
+                                        <div class="list_cover">
+                                            <img src="images/(8)MAGIC! - Rude.jpg" alt="MAGIC! - Rude">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">MAGIC! - Rude</p>
+                                            <p class="song_duration">Duración: 3:46</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-9">
+                                        <div class="list_cover">
+                                            <img src="images/(9)Morat & Alvaro Soler - Yo Contigo, Tú Conmigo.jpg" alt="Morat & Alvaro Soler - Yo Contigo, Tú Conmigo">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Morat & Alvaro Soler - Yo Contigo, Tú Conmigo</p>
+                                            <p class="song_duration">Duración: 2:59</p>
+                                        </div>
+                                    </div>
+                                    <div class="song" id="song-10">
+                                        <div class="list_cover">
+                                            <img src="images/(10)Maneskin - Beggin.jpg" alt="Måneskin - Beggin'">
+                                        </div>
+                                        <div class="details_song">
+                                            <p class="song_name">Måneskin - Beggin'</p>
+                                            <p class="song_duration">Duración: 3:31</p>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="games_category" id="games-category">
+                            <p>PRÓXIMAMENTE...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer_container">
+            <p>&copy; Copyright Jair Torres - 2021</p>
+        </div>
+    </footer>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/funtions.js" type="text/javascript"></script>
+    <script src="js/music.js" type="text/javascript"></script>
+    <script src="js/games.js"  type="text/javascript"></script>
+</body>
+</html>
