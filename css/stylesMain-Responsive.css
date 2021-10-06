@@ -1,0 +1,27 @@
+@media screen and (max-width: 768px) and (orientation:portrait){
+    /*TODO: HEADER*/
+    .center_container .logo_JT{
+        font-size: 2.2em;
+    }
+    .category{
+        font-size: 1.2em;
+    }
+    /*TODO: MAIN*/
+    .main .main_container::before{
+        content: "";
+        width: 93%;
+        height: 93%;
+    }
+    .main_container .categorys_container {
+        width: 91%;
+        height: 92%;
+    }
+    .subcc .onload_category span{
+        font-size: 2.2em;
+    }
+    
+    /*TODO: FOOTER*/
+    .footer_container{
+        font-size: .7em;
+    }
+}

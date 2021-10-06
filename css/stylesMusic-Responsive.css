@@ -1,0 +1,44 @@
+@media screen and (max-width: 768px) and (orientation:portrait){
+    /*TODO: MUSIC CATEGORY*/
+    .music_category .music_player{
+        width: 100%;
+        height: 65%;
+    }
+    .music_player .player{
+        position: relative;
+        height: 85px;
+        padding: 10px 20px;
+    }
+    .btns_container .controls{
+        width: 50px;
+        height: 50px;
+    }
+    .btns_container .play_pause{
+        width: 60px;
+        height: 60px;
+    }
+    .btns_container .controls ion-icon{
+        font-size: 1.5em;
+    }
+    .btns_container .play_pause ion-icon{
+        font-size: 2.2em;
+    }
+    .music_player .name_song_play{
+        width: 95%;
+        height: max-content;
+        text-align: center;
+        font-size: 1em;
+    }
+    .music_player .song_cover{
+        width: 180px;
+        height: 180px;
+    }
+    .music_category .play_list_container{
+        width: 100%;
+        height: 35%;
+    }
+    .play_list_container .play_list{
+        width: 93%;
+        height: 93%;
+    }
+}
