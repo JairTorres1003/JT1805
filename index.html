@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="css/stylesFuntions.css" type="text/css">
     <link rel="stylesheet" href="css/stylesMusic.css" type="text/css">
     <link rel="stylesheet" href="css/stylesGames.css" type="text/css">
-    <link rel="stylesheet" href="css/stylesMusic-Responsive.css" type="text/css">
     <link rel="stylesheet" href="css/stylesMain-Responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesFuntions-Responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesMusic-Responsive.css" type="text/css">
+    <link rel="stylesheet" href="css/stylesGames-Responsive.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mogra&display=swap" rel="stylesheet">
@@ -21,18 +23,16 @@
 </head>
 <body>
     <header>
-        <img src="images/icon_JT.png" alt="icon_JT" class="icon_JT">
         <div class="load_page" id="load-page"></div>
         <div class="header_container">
+            <div class="center_container">
+                <a href="index.html" class="logo_JT">JT</a>
+            </div>
             <div class="left_container">
                 <span class="category" id="c-funtion" onclick="reloadPage(), categoryFuntion()">Funciones</span>
                 <span class="category" id="c-music" onclick="reloadPage(), categoryMusic()">Música</span>
                 <span class="category" id="c-games" onclick="reloadPage(), categoryGames()">Juegos</span>
             </div>
-            <div class="center_container">
-                <a href="index.html" class="logo_JT">JT</a>
-            </div>
-            <div class="right_container"></div>
         </div>
     </header>
     <main class="main">
@@ -54,6 +54,7 @@
                             <span>.</span>
                         </div>
                         <div class="funtions_category" id="funtions-category">
+                            <span class="menu" id="menu" onclick="menu()"><ion-icon name="menu-outline"></ion-icon></span>
                             <div class="btnFuntions_container" id="btnFuntions-container">
                                 <button class="btn_funtion" id="btn-f1" onclick="btnFMain(), btnFuntion1()">Función 1</button>
                                 <button class="btn_funtion" id="btn-f2" onclick="btnFMain(), btnFuntion2()">Función 2</button>
