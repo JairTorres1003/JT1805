@@ -1,3 +1,5 @@
+const funtions_category = document.getElementById('funtions-category');
+const btnFuntions_container = document.getElementById('btnFuntions-container');
 const runFuntion_container = document.getElementById('runFuntion-container');
 const run_funtion1 = document.getElementById('run-funtion1');
     const loading =document.getElementById('loading');
@@ -7,10 +9,12 @@ const run_funtion3 = document.getElementById('run-funtion3');
 const run_funtion4 = document.getElementById('run-funtion4');
 const run_funtion5 = document.getElementById('run-funtion5');
 const run_funtion6 = document.getElementById('run-funtion6');
+var menuBoolean = false;
 
 //? Restar variables
 function resetVariable() {
     num = 0;
+    menuBoolean = false;
     loading.style.width = "0%";
     load_finished.innerHTML = "cargar"
     clearInterval(time);
@@ -22,6 +26,7 @@ function resetVariable() {
     document.getElementById('click-pain').style.opacity = "1";
     document.getElementById('text-dbl').classList.remove('tdbl');
     document.getElementById('text-dbl').innerHTML = "¡Dale docle click al texto!";
+    closeMenu();
 }
 //? funtion category
 function categoryFuntion() {
@@ -35,6 +40,31 @@ function categoryFuntion() {
     btnFMain();
     document.getElementById('run-funtionNone').classList.remove('disablerRFuntionN');
 }
+//? menu
+function menu() {
+    if (menuBoolean == false) {
+        openMenu();
+    } else {
+        closeMenu();
+    }
+}
+function openMenu() {
+    document.getElementById('menu').innerHTML = '<ion-icon name="arrow-back-outline"></ion-icon>';
+    menuBoolean = true;
+    btnFuntions_container.classList.add('btnfc');
+    funtions_category.classList.add('ffc');
+}
+function closeMenu() {
+    document.getElementById('menu').innerHTML = '<ion-icon name="menu-outline"></ion-icon>';
+    menuBoolean = false;
+    btnFuntions_container.classList.remove('btnfc');
+    funtions_category.classList.remove('ffc');
+}
+funtions_category.addEventListener('click', function(e){
+    if (e.target == funtions_category) {    
+        closeMenu();
+    }
+});
 //? all buttons funtion
 function btnFMain() {
     for (let x = 0; x < runFuntion_container.childElementCount; x++) {

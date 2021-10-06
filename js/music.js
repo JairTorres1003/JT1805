@@ -53,7 +53,7 @@ function categoryMusic() {
     }
     createNodeMusic = true;
     song_playing = false;
-    song_number = 0;
+    song_number = 0; 
     play_pause.classList.remove('active');
     play_pause.innerHTML = '<ion-icon name="play-outline"></ion-icon>';
     loadSong(songList[song_number]);

@@ -10,6 +10,7 @@ function reloadPage() {
     for (let x = 0; x < subcc.childElementCount; x++) {
         subcc.children[x].style.display = "none";
     }
+    loadSong(songList[song_number]);
 }
 window.addEventListener('load', function(){
     setTimeout(() => {
