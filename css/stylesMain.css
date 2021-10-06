@@ -2,7 +2,7 @@
     --Dominan_Color--: rgb(36,8,71);
     --SecondD_Color--: rgb(86, 53, 171);
     --HD_backgroundColor--: rgb(22, 42, 117);
-    --HD_Border--: 5px solid rgb(255, 255, 255);
+    --HD_Border--: 2px solid rgb(255, 255, 255);
     --HD_height--: 8vh;
     --FD_backgroundColor--: rgb(22, 42, 117);
     --FD_height--: 3vh;
@@ -27,36 +27,32 @@
     background: linear-gradient(146deg, rgb(77, 119, 175) 0%, rgb(53, 171, 102) 61%, rgb(36, 20, 80) 100%);
     transition: width 1.5s;
 }
-.icon_JT{
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-}
 .header_container{
     width: 100%;
     height: var(--HD_height--);
     background-color: var(--HD_backgroundColor--);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 5px;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 2.5%;
+    gap: 2%;
 }
 .header_container .center_container{
-    background: rgb(48,20,108);
+    background: rgb(48, 20, 108);
     background: radial-gradient(circle, rgba(48, 20, 108, 1) 60%, rgba(22 ,20, 131, 0.85) 100%);
-    width: 16vh;
-    height: 9vh;
-    border-radius: 100% 0% 50% 50% / 0% 0% 100% 100%; 
-    border-left: var(--HD_Border--);
-    border-bottom: var(--HD_Border--);
-    border-right: var(--HD_Border--);
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
     flex-wrap: wrap;
     overflow: hidden;
     cursor: pointer;
     z-index: 1000;
+    width: calc(8vh - 5px);
+    height: calc(100% - 5px);
+    border-radius: 50%;
+    border: var(--HD_Border--);
 }
 .header_container .center_container:hover{
     opacity: 0.8;
@@ -64,17 +60,18 @@
 .center_container .logo_JT{
     color: rgb(255, 255, 255);
     text-decoration: none;
-    font-size: 3.2em;
+    font-size: 2.5em;
     font-family: var(--Dominan_fontFamily--);
+    padding-top: 10px;
 }
-.header_container .left_container, .right_container{
-    width: calc(50% - 12vh);
+.header_container .left_container{
+    width: calc(98% - 8vh);
     height: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-content: center;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 2.5%;
 }
 .category{
     color: rgb(255, 255, 255);

@@ -19,7 +19,7 @@
 }
 .music_player .player{
     position: relative;
-    width: 90%;
+    width: max-content;
     height: 110px;
     padding: 20px 30px;
     background-color: rgb(240, 240, 240);
@@ -36,6 +36,7 @@
     flex-wrap: wrap;
     width: 100%;
     height: 100%;
+    gap: 40px;
 }
 .btns_container .controls{
     background-color: rgb(240, 240, 240);
